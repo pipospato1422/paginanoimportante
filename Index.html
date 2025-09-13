@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Noticias</title>
+        <link rel="stylesheet" href="main.css" type="text/css"/>
+        <script>
+    function mostrarNuevoContenido() {
+        document.getElementById('titulo').innerHTML = "Y sigues perdiendo el tiempo!";
+        document.getElementById('contenido').innerHTML = "Deja de perder el tiempo! Para que le picas a los botones. ";
+        
+        // Agregar imagen
+        let img = document.createElement("img");
+        img.src = "gatito_enojado.jpg"; // Cambia por el path real
+        img.alt = "Imagen de ejemplo";
+        img.style.maxWidth = "100%";
+        document.getElementById('contenido').appendChild(img);
+
+        // Ocultar botones
+        document.getElementById('botones').style.display = "none";
+    }
+
+    function cancelar() {
+        alert("Has cancelado la acción.");
+    }
+    </script>
+
+    </head>
+    <body>
+        <div class="cajita" id="cajita">
+    <div class="titulo" id="titulo">Atencion!</div>
+    <div class="contenido" id="contenido">
+        Nos complace informarle que por este medio a traves de forma escrita, con las mejores
+                intensiones, dentro de lo posible, le informamos teniendo en cuenta su consentimiento que esta perdiendo el tiempo
+                leyendo este mensaje, Gracias!
+    </div>
+    <div class="flotante" id="botones">
+        <button class="primary" onclick="mostrarNuevoContenido()">Aceptar</button>
+        <button class="secondary" onclick="mostrarNuevoContenido()">Cancelar</button>
+    </div>
+</div>
+
+    </body>
+</html>
